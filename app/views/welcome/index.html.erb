@@ -1,5 +1,5 @@
-<h1>Extenda helpdesk</h1>
-
+<h1>helpdesk</h1>
+<h2>If your office system is unable to make or receive telephone calls, please contact us at <span>800-640-2411</span> from a cell or home phone</h2>
 <div id="user_nav">
   <nav>
     <% if user_signed_in? %>
@@ -11,4 +11,12 @@
       <%= link_to 'Sign In', new_user_session_path %>
     <% end %>
   </nav>
+</div>
+
+<div id="intro">
+  <% if user_signed_in? %>
+    <P>Enter your ticket information below.</p>
+  <% else %>
+    <p>Please sign in to create a trouble ticket</p>
+  <% end %>
 </div>
