@@ -1,5 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Helpdesk</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
 <h1>helpdesk</h1>
-<h2>If your office system is unable to make or receive telephone calls, please contact us at <span>800-640-2411</span> from a cell or home phone</h2>
+<p>If your office system is unable to make or receive telephone calls, please contact us from a cell or home phone</p>
+<h3>800-640-2411</h3>
 <div id="user_nav">
   <nav>
     <% if user_signed_in? %>
@@ -16,7 +27,10 @@
 <div id="intro">
   <% if user_signed_in? %>
     <P>Enter your ticket information below.</p>
+    <% render 'form' %>
   <% else %>
     <p>Please sign in to create a trouble ticket</p>
   <% end %>
 </div>
+</body>
+</html>
